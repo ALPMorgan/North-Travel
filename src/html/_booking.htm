@@ -1,0 +1,27 @@
+<section class="booking">
+	<div class="booking__container">
+		<div class="booking__body">
+			<h2 class="booking__title title">Бронирование</h2>
+			<form action="#" class="booking__form form-booking">
+				<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-required placeholder="Ваше имя"
+					class="form-booking__input">
+				<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" data-required
+					placeholder="Ваш номер телефона" class="form-booking__input">
+				<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" data-required="email"
+					placeholder="Ваше e-mail" class="form-booking__input">
+				<textarea autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-required
+					placeholder="Комментарий" class="form-booking__input form-booking__input-area"></textarea>
+				<div class="form-booking__checkbox checkbox-form">
+					<input id="c_1" data-error="Ошибка" class="checkbox-form__input" type="checkbox" value="1" name="form[]">
+					<label for="c_1" class="checkbox-form__label"><span class="checkbox-form__text">Я согласен с <a
+								href="#">политикой
+								конфиденциальности</a></span></label>
+				</div>
+				<button type="submit" class="form-booking__button">Отправить</button>
+			</form>
+		</div>
+	</div>
+	<div class="booking__image">
+		<img src="@img/home/icons/03.svg" alt="Гора">
+	</div>
+</section>

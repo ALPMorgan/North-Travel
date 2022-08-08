@@ -1,0 +1,155 @@
+.booking {
+   position: relative;
+   padding-top: rem(127);
+   padding-bottom: rem(140);
+   @media (max-width: $pc) {
+      padding-top: rem(87);
+      padding-bottom: rem(100);
+   }
+   @media (max-width: $mobile) {
+      padding-top: rem(37);
+      padding-bottom: rem(50);
+   }
+   // .booking__container
+   &__container {
+   }
+   // .booking__body
+   &__body {
+      position: relative;
+      z-index: 5;
+      padding: 0px 0px 0px 40px;
+      @media (max-width: $tablet) {
+         padding: 0px;
+      }
+   }
+   // .booking__title
+   &__title {
+      max-width: 560px;
+      &:not(:last-child) {
+         margin-bottom: rem(80);
+         @media (max-width: $pc) {
+            margin-bottom: rem(60);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(35);
+         }
+      }
+   }
+   // .booking__form
+   &__form {
+   }
+   // .booking__image {
+   &__image {
+      position: absolute;
+      z-index: 1;
+      width: 63%;
+      height: 63%;
+      top: -10%;
+      right: -5%;
+      img {
+         width: 75%;
+         opacity: 0.07;
+      }
+      @media (max-width: $tablet) {
+         display: none;
+      }
+   }
+}
+
+.form-booking {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   max-width: 560px;
+   & > *:not(:last-child) {
+      margin-bottom: 30px;
+   }
+   // .form-booking__input
+   &__input {
+      display: inline-block;
+      height: rem(50);
+      background-color: #454545;
+      padding: 0px 20px;
+      color: $mainColor;
+   }
+   // .checkbox-form__input-area
+   &__input-area {
+      min-height: rem(85);
+      padding-top: rem(15);
+   }
+   // .form-booking__checkbox
+   &__checkbox {
+   }
+   // .form-booking__button
+   &__button {
+      height: rem(50);
+      background-color: $blueColor;
+      color: $bgColor;
+      font-size: rem(16);
+      font-weight: 600;
+      border: 1px solid #90b3cc;
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: $bgColor;
+            color: $mainColor;
+            border: 1px solid $mainColor;
+         }
+      }
+   }
+}
+
+.checkbox-form {
+   position: relative;
+   // .checkbox__input
+   &__input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      &:focus + .checkbox__label:before {
+         box-shadow: 0 0 5px #000;
+      }
+      &:checked + .checkbox__label:before {
+         background: #000;
+      }
+   }
+   // .checkbox__label
+   &__label {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      gap: 10px;
+      &:before {
+         content: "";
+         align-self: flex-start;
+         flex: 0 0 20px;
+         width: 20px;
+         height: 20px;
+         border: 1px solid #a7a9ac;
+      }
+   }
+   // .checkbox__text
+   &__text {
+      font-family: "Lora";
+      font-size: rem(16);
+      line-height: math.div(21, 16);
+      font-weight: 400;
+      a {
+         color: $blueColor;
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+}
+
+.form__error {
+   position: absolute;
+   left: 0;
+   bottom: -10px;
+   color: red;
+}
