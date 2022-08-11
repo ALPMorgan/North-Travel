@@ -24,8 +24,15 @@
 	}
 	// .footer__logo
 	&__logo {
+		display: inline-block;
 		max-width: 149px;
 		margin-bottom: rem(25);
+		@media (min-width: $tablet) {
+			@include animScrollStart;
+			&._active {
+				@include animScrollOne;
+			}
+		}
 	}
 	// .footer__main
 	&__main {
@@ -52,6 +59,12 @@
 		font-size: rem(16);
 		line-height: math.div(24.8, 16);
 		font-weight: 400;
+		@media (min-width: $tablet) {
+			@include animScrollStart;
+			&._active {
+				@include animScrollOne;
+			}
+		}
 		@media (max-width: em(870)) {
 			flex: 0 1 100%;
 			order: 3;
@@ -73,6 +86,12 @@
 }
 
 .menu-footer {
+	@media (min-width: $tablet) {
+		@include animScrollStart;
+		&._active {
+			@include animScrollOne;
+		}
+	}
 	@media (max-width: em(870)) {
 		flex: 0 1 40%;
 		order: 1;
@@ -117,6 +136,12 @@
 	font-size: rem(16);
 	font-weight: 400;
 	line-height: math.div(24.8, 16);
+	@media (min-width: $tablet) {
+		@include animScrollStart;
+		&._active {
+			@include animScrollOne;
+		}
+	}
 	@media (max-width: em(870)) {
 		flex: 0 1 40%;
 		align-items: flex-end;
@@ -161,6 +186,12 @@
 	display: flex;
 	justify-content: space-between;
 	gap: rem(20);
+	@media (min-width: $tablet) {
+		@include animScrollStart;
+		&._active {
+			@include animScrollOne;
+		}
+	}
 	// .bottom-footer__policy
 	&__policy {
 		font-family: "Lora";

@@ -25,6 +25,14 @@
       line-height: math.div(99.2, 64);
       font-weight: 700;
       margin-bottom: rem(9);
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            transform: translate(0, 0);
+            opacity: 1;
+            transition: all 1.3s ease 1.2s;
+         }
+      }
       @media (max-width: $tablet) {
          font-size: rem(48);
          margin-bottom: rem(4);
@@ -42,6 +50,14 @@
       line-height: math.div(55.8, 36);
       font-weight: 700;
       margin-bottom: rem(44);
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            transform: translate(0, 0);
+            opacity: 1;
+            transition: all 1.3s ease 1.4s;
+         }
+      }
       @media (max-width: $tablet) {
          font-size: rem(30);
          margin-bottom: rem(30);
@@ -53,6 +69,15 @@
    }
    // .cover__button
    &__button {
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            transform: translate(0, 0);
+            opacity: 1;
+            transition: opacity 1.3s ease 1.7s, transform 1.3s ease 1.7s, color 0.3s ease 0s,
+               background-color 0.3s ease 0s, border 0.3s ease 0s;
+         }
+      }
       @media (any-hover: hover) {
          &:hover {
             color: $mainColor;
@@ -82,6 +107,22 @@
       left: 0;
       @media (max-width: $mobile) {
          height: 80vh;
+      }
+   }
+   @media (min-width: $tablet) {
+      // .cover__bg
+      &__bg {
+         position: absolute;
+         z-index: 10;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: $bgColor;
+         &._active {
+            transform: translate(0, -100%);
+            transition: all 1.1s linear 0s;
+         }
       }
    }
 }
@@ -189,6 +230,7 @@
    }
    // .content-about__image-ibg
    &__image-ibg {
+      position: relative;
       width: 100%;
       padding-bottom: 108.7%;
       @media (max-width: $pc) {
@@ -239,6 +281,42 @@
       }
       @media (max-width: $mobile) {
          font-size: rem(16);
+      }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
+   }
+   @media (min-width: $tablet) {
+      // .content-about__bg
+      &__bg {
+         position: absolute;
+         z-index: 10;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-color: $bgColor;
+         transition: all 2s linear 0s;
+      }
+      // .content-about__bg-left
+      &__bg-left {
+         left: 0;
+         &._active {
+            transform: translate(-100%, 0);
+            width: 0;
+            transition: all 2s linear 0s;
+         }
+      }
+      // .content-about__bg-right
+      &__bg-right {
+         right: 0;
+         &._active {
+            transform: translate(100%, 0);
+            width: 0;
+            transition: all 2s linear 0s;
+         }
       }
    }
 }
@@ -298,6 +376,7 @@
 .item-organizers {
    // .item-organizers__image-ibg
    &__image-ibg {
+      position: relative;
       padding-bottom: 100%;
       margin-bottom: rem(44);
       @media (max-width: $tablet) {
@@ -310,6 +389,40 @@
          margin-bottom: rem(26);
       }
    }
+   @media (min-width: $tablet) {
+      // .item-organizers__bg
+      &__bg {
+         position: absolute;
+         z-index: 10;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-color: $bgColor;
+         transition: all 0.7s linear 0s;
+      }
+      // .item-organizers__bg-left
+      &__bg-left {
+         left: 0;
+         &._active {
+            width: 0;
+         }
+      }
+      // .item-organizers__bg-center
+      &__bg-center {
+         left: 0;
+         &._active {
+            left: 50%;
+            width: 0;
+         }
+      }
+      // .item-organizers__bg-right
+      &__bg-right {
+         right: 0;
+         &._active {
+            width: 0;
+         }
+      }
+   }
    // .item-organizers__body
    &__body {
    }
@@ -320,6 +433,12 @@
       font-weight: 600;
       line-height: math.div(34.7, 24);
       margin-bottom: rem(4);
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
       @media (max-width: $mobile) {
          font-size: rem(20);
          margin-bottom: rem(5);
@@ -332,6 +451,12 @@
       font-weight: 400;
       line-height: math.div(27.9, 18);
       margin-bottom: rem(19);
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollTwo;
+         }
+      }
       @media (max-width: $mobile) {
          line-height: math.div(25.2, 18);
          margin-bottom: rem(15);
@@ -343,6 +468,12 @@
       font-size: rem(18);
       font-weight: 300;
       line-height: math.div(27.9, 18);
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollThree;
+         }
+      }
       @media (max-width: $mobile) {
          font-size: rem(16);
       }
@@ -437,6 +568,7 @@
    // .traveling__image-mini-ibg
    &__image-mini-ibg {
       position: absolute;
+      z-index: 11;
       min-width: 240px;
       min-height: 320px;
       bottom: -110px;
@@ -498,6 +630,7 @@
    // .traveling__image-mini-reverse-ibg
    &__image-mini-reverse-ibg {
       position: absolute;
+      z-index: 11;
       min-width: 240px;
       min-height: 320px;
       bottom: -110px;
@@ -524,6 +657,35 @@
       }
       @media (max-width: $tablet) {
          display: none;
+      }
+   }
+   @media (min-width: $tablet) {
+      // .traveling__bg
+      &__bg {
+         position: absolute;
+         z-index: 10;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-color: $bgColor;
+      }
+      // .traveling__bg-left
+      &__bg-left {
+         left: 0;
+         &._active {
+            transform: translate(-100%, 0);
+            width: 0;
+            transition: all 2s linear 0s;
+         }
+      }
+      // .traveling__bg-right
+      &__bg-right {
+         right: 0;
+         &._active {
+            transform: translate(100%, 0);
+            width: 0;
+            transition: all 2s linear 0s;
+         }
       }
    }
 }
@@ -557,6 +719,12 @@
       font-weight: 600;
       line-height: math.div(27.9, 18);
       margin-bottom: rem(36);
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
       @media (max-width: $pc) {
          max-width: 270px;
       }
@@ -582,6 +750,12 @@
       font-weight: 600;
       line-height: math.div(62, 40);
       margin-bottom: rem(30);
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
       @media (max-width: $tablet) {
          line-height: math.div(40, 40);
          margin-bottom: rem(0);
@@ -602,6 +776,12 @@
       font-weight: 300;
       line-height: math.div(27.9, 18);
       margin-bottom: rem(56);
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
       @media (max-width: $pc) {
          max-width: 270px;
       }
@@ -624,6 +804,12 @@
       font-weight: 600;
       line-height: math.div(62, 40);
       margin-bottom: rem(45);
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
       @media (max-width: $tablet) {
          margin-bottom: 0;
       }
@@ -637,6 +823,15 @@
    }
    // .content-traveling__button
    &__button {
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            transform: translate(0, 0);
+            opacity: 1;
+            transition: opacity 1.3s ease 0.3s, transform 1.3s ease 0.3s, color 0.3s ease 0s,
+               background-color 0.3s ease 0s, border 0.3s ease 0s;
+         }
+      }
       @media (any-hover: hover) {
          &:hover {
             color: $mainColor;
@@ -921,6 +1116,12 @@
       &:not(:last-child) {
          margin-bottom: 30px;
       }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
    }
    // .phrase__autor
    &__autor {
@@ -928,6 +1129,12 @@
       font-size: rem(18);
       line-height: math.div(27, 18);
       font-weight: 600;
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollTwo;
+         }
+      }
    }
    // .phrase__image-ibg
    &__image-ibg {
@@ -984,15 +1191,15 @@
 .spollers-question {
    border-top: 1px solid $mainColor;
    border-bottom: 1px solid $mainColor;
-   padding: rem(20) 0px;
+   padding: rem(25) 0px;
    // .spollers-question__item
    &__item {
       &:not(:last-child) {
          border-bottom: 1px solid $mainColor;
-         padding-bottom: rem(20);
+         padding-bottom: rem(25);
       }
       &:not(:first-child) {
-         padding-top: rem(20);
+         padding-top: rem(25);
       }
    }
    // .spollers-question__title
@@ -1007,8 +1214,13 @@
       width: 100%;
       gap: rem(10);
       text-align: start;
-
       transition: all 0.3s ease 0s;
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
       @media (max-width: $mobile) {
          font-size: rem(20);
       }

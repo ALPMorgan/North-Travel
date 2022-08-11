@@ -1,40 +1,65 @@
 //Подключение шрифта
 @mixin font($font_name, $file_name, $weight, $style) {
-	@font-face {
-		font-family: $font_name;
-		font-display: swap;
-		src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.woff") format("woff");
-		font-weight: #{$weight};
-		font-style: #{$style};
-	}
+   @font-face {
+      font-family: $font_name;
+      font-display: swap;
+      src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.woff") format("woff");
+      font-weight: #{$weight};
+      font-style: #{$style};
+   }
 }
 //Percent
 @function percent($px, $from) {
-	$result: math.div($px, $from) * 100%;
-	@return $result;
+   $result: math.div($px, $from) * 100%;
+   @return $result;
 }
 //REM
 @function rem($px) {
-	$result: math.div($px, 16) + rem;
-	@return $result;
+   $result: math.div($px, 16) + rem;
+   @return $result;
 }
 //EM
 @function em($px, $current: 16) {
-	$result: math.div($px, $current) + em;
-	@return $result;
+   $result: math.div($px, $current) + em;
+   @return $result;
 }
 //Адаптивное свойство
 
 //Currency
 @mixin currency($sym) {
-	&::after {
-		content: "#{$sym}";
-	}
+   &::after {
+      content: "#{$sym}";
+   }
 }
 
 // Grids
 @mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
-	display: grid;
-	gap: $gap;
-	grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+   display: grid;
+   gap: $gap;
+   grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+}
+
+// Анимация при скролле
+
+@mixin animScrollStart() {
+   transform: translate(0, 100px);
+   opacity: 0;
+}
+
+@mixin animScrollOne() {
+   transform: translate(0, 0);
+   opacity: 1;
+   transition: all 1.3s ease 0.3s;
+}
+
+@mixin animScrollTwo() {
+   transform: translate(0, 0);
+   opacity: 1;
+   transition: all 1.3s ease 0.6s;
+}
+
+@mixin animScrollThree() {
+   transform: translate(0, 0);
+   opacity: 1;
+   transition: all 1.3s ease 0.9s;
 }
