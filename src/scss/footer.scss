@@ -28,9 +28,12 @@
 		max-width: 149px;
 		margin-bottom: rem(25);
 		@media (min-width: $tablet) {
-			@include animScrollStart;
+			transform: translate(-100px, 0px);
+			opacity: 0;
 			&._active {
-				@include animScrollOne;
+				transform: translate(0px, 0px);
+				opacity: 1;
+				transition: all 1.3s ease 0.3s;
 			}
 		}
 	}
@@ -60,9 +63,12 @@
 		line-height: math.div(24.8, 16);
 		font-weight: 400;
 		@media (min-width: $tablet) {
-			@include animScrollStart;
+			transform: translate(-100px, 0px);
+			opacity: 0;
 			&._active {
-				@include animScrollOne;
+				transform: translate(0px, 0px);
+				opacity: 1;
+				transition: all 1.3s ease 0.3s;
 			}
 		}
 		@media (max-width: em(870)) {
@@ -137,9 +143,12 @@
 	font-weight: 400;
 	line-height: math.div(24.8, 16);
 	@media (min-width: $tablet) {
-		@include animScrollStart;
+		transform: translate(100px, 0px);
+		opacity: 0;
 		&._active {
-			@include animScrollOne;
+			transform: translate(0px, 0px);
+			opacity: 1;
+			transition: all 1.3s ease 0.3s;
 		}
 	}
 	@media (max-width: em(870)) {

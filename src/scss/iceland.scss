@@ -55,6 +55,12 @@
       @media (max-width: $mobile) {
          display: none;
       }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollThree;
+         }
+      }
    }
    // .cover-travel__title
    &__title {
@@ -78,6 +84,12 @@
       @media (max-width: $mobileSmall) {
          margin-bottom: rem(27);
       }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollFour;
+         }
+      }
    }
    // .cover-travel__button
    &__button {
@@ -96,6 +108,15 @@
          min-height: rem(50);
          max-width: rem(200);
          font-size: rem(14);
+      }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            transform: translate(0, 0);
+            opacity: 1;
+            transition: opacity 1.3s ease 1.5s, transform 1.3s ease 1.5s, color 0.3s ease 0s,
+               background-color 0.3s ease 0s, border 0.3s ease 0s;
+         }
       }
    }
    // .cover-travel__media
@@ -145,6 +166,12 @@
          min-width: rem(290);
          padding-bottom: 84.7%;
       }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollSix;
+         }
+      }
    }
    // .cover-travel__image-mini
    &__image-mini {
@@ -174,6 +201,12 @@
          width: 100%;
          padding-bottom: 62.5%;
       }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
    }
    // .cover-travel__image-litle
    &__image-litle {
@@ -201,6 +234,12 @@
       }
       @media (max-width: $mobileSmall) {
          display: none;
+      }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollTwo;
+         }
       }
    }
    // .cover-travel__image-icon
@@ -281,6 +320,21 @@
          min-height: auto;
       }
    }
+   // .one-attractions__bg
+   &__bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $bgColor;
+      transition: all 1s linear 0s;
+      &._active {
+         transform: translate(100%, 0);
+         width: 0;
+         transition: all 2s linear 0s;
+      }
+   }
    // .one-attractions__image-ibg
    &__image-ibg {
       position: absolute;
@@ -311,13 +365,29 @@
       @media (max-width: $pc) {
          display: none;
       }
+      @media (min-width: $pc) {
+         transform: translate(-900px, 0);
+         &._active {
+            transform: translate(0, 0);
+            transition: all 2s ease 0.3s;
+         }
+      }
    }
    // .one-attractions__title
    &__title {
+      transform: translate(900px, 0);
+      &._active {
+         transform: translate(0, 0);
+         transition: all 2s ease 0.3s;
+      }
    }
    // .one-attractions__text
    &__text {
       max-width: 600px;
+      @include animScrollStart;
+      &._active {
+         @include animScrollOne;
+      }
       @media (max-width: $pc) {
          max-width: 420px;
       }
@@ -368,6 +438,21 @@
          padding-right: rem(0);
       }
    }
+   // .two-attractions__bg
+   &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $bgColor;
+      transition: all 1s linear 0s;
+      &._active {
+         transform: translate(-100%, 0);
+         width: 0;
+         transition: all 2s linear 0s;
+      }
+   }
    // .two-attractions__image-ibg
    &__image-ibg {
       padding-bottom: 120%;
@@ -399,12 +484,30 @@
       @media (max-width: $pc) {
          display: none;
       }
+      @media (min-width: $pc) {
+         transform: translate(900px, 0);
+         &._active {
+            transform: translate(0, 0);
+            transition: all 2s ease 0.3s;
+         }
+      }
    }
    // .two-attractions__title
    &__title {
+      @media (min-width: $tablet) {
+         transform: translate(-900px, 0);
+         &._active {
+            transform: translate(0, 0);
+            transition: all 2s ease 0.3s;
+         }
+      }
    }
    // .two-attractions__text
    &__text {
+      @include animScrollStart;
+      &._active {
+         @include animScrollOne;
+      }
    }
 }
 
@@ -460,12 +563,30 @@
       @media (max-width: $pc) {
          display: none;
       }
+      @media (min-width: $pc) {
+         transform: translate(900px, 0);
+         &._active {
+            transform: translate(0, 0);
+            transition: all 2s ease 0.3s;
+         }
+      }
    }
    // .three-attractions__title
    &__title {
+      @media (min-width: $tablet) {
+         transform: translate(-900px, 0);
+         &._active {
+            transform: translate(0, 0);
+            transition: all 2s ease 0.3s;
+         }
+      }
    }
    // .three-attractions__text
    &__text {
+      @include animScrollStart;
+      &._active {
+         @include animScrollOne;
+      }
    }
    // .three-attractions__media
    &__media {
@@ -485,6 +606,21 @@
       @media (max-width: $mobile) {
          max-width: rem(300);
          margin: 0 auto;
+      }
+   }
+   // .three-attractions__bg
+   &__bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $bgColor;
+      transition: all 1s linear 0s;
+      &._active {
+         transform: translate(100%, 0);
+         width: 0;
+         transition: all 2s linear 0s;
       }
    }
    // .three-attractions__image-ibg
@@ -540,6 +676,12 @@
       &:not(:last-child) {
          margin-bottom: 30px;
       }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
    }
    // .phrase-swiper__autor
    &__autor {
@@ -547,6 +689,12 @@
       font-size: rem(18);
       line-height: math.div(27, 18);
       font-weight: 600;
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollTwo;
+         }
+      }
    }
    // .phrase-swiper__image-ibg
    &__image-ibg {
@@ -860,15 +1008,15 @@
 .spollers-price {
    border-top: 1px solid $mainColor;
    border-bottom: 1px solid $mainColor;
-   padding: rem(20) 0px;
+   padding: rem(25) 0px;
    // .spollers-price__item
    &__item {
       &:not(:last-child) {
          border-bottom: 1px solid $mainColor;
-         padding-bottom: rem(20);
+         padding-bottom: rem(25);
       }
       &:not(:first-child) {
-         padding-top: rem(20);
+         padding-top: rem(25);
       }
    }
    // .spollers-price__title
@@ -884,6 +1032,12 @@
       gap: rem(10);
       text-align: start;
       transition: all 0.3s ease 0s;
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
       @media (max-width: $mobile) {
          font-size: rem(20);
       }

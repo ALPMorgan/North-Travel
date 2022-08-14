@@ -63,3 +63,21 @@
    opacity: 1;
    transition: all 1.3s ease 0.9s;
 }
+
+@mixin animScrollFour() {
+   transform: translate(0, 0);
+   opacity: 1;
+   transition: all 1.3s ease 1.2s;
+}
+
+@mixin animScrollFive() {
+   transform: translate(0, 0);
+   opacity: 1;
+   transition: all 1.3s ease 1.5s;
+}
+
+@mixin animScrollSix() {
+   transform: translate(0, 0);
+   opacity: 1;
+   transition: all 1.3s ease 1.8s;
+}
