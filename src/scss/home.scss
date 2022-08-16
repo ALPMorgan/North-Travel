@@ -131,6 +131,8 @@
 
 .about {
    position: relative;
+   z-index: 2;
+   background-color: $bgColor;
    padding-top: rem(127);
    padding-bottom: rem(140);
    @media (max-width: $pc) {
@@ -304,7 +306,6 @@
       &__bg-left {
          left: 0;
          &._active {
-            transform: translate(-100%, 0);
             width: 0;
             transition: all 2s linear 0s;
          }
@@ -313,7 +314,6 @@
       &__bg-right {
          right: 0;
          &._active {
-            transform: translate(100%, 0);
             width: 0;
             transition: all 2s linear 0s;
          }
@@ -324,6 +324,9 @@
 //===================================================================================================
 
 .organizers {
+   position: relative;
+   z-index: 2;
+   background-color: $bgColor;
    padding-top: rem(127);
    padding-bottom: rem(140);
    @media (max-width: $pc) {
@@ -398,7 +401,7 @@
          width: 100%;
          height: 100%;
          background-color: $bgColor;
-         transition: all 0.7s linear 0s;
+         transition: all 1s linear 0s;
       }
       // .item-organizers__bg-left
       &__bg-left {
@@ -484,6 +487,8 @@
 
 .traveling {
    position: relative;
+   z-index: 2;
+   background-color: $bgColor;
    padding-top: rem(127);
    padding-bottom: rem(140);
    @media (max-width: $pc) {
@@ -571,7 +576,7 @@
       z-index: 11;
       min-width: 240px;
       min-height: 320px;
-      bottom: -110px;
+      bottom: -50px;
       right: -80px;
       @media (max-width: $pc) {
          bottom: -80px;
@@ -633,7 +638,7 @@
       z-index: 11;
       min-width: 240px;
       min-height: 320px;
-      bottom: -110px;
+      bottom: -50px;
       left: -80px;
       @media (max-width: $pc) {
          bottom: -80px;
@@ -673,7 +678,6 @@
       &__bg-left {
          left: 0;
          &._active {
-            transform: translate(-100%, 0);
             width: 0;
             transition: all 2s linear 0s;
          }
@@ -682,7 +686,6 @@
       &__bg-right {
          right: 0;
          &._active {
-            transform: translate(100%, 0);
             width: 0;
             transition: all 2s linear 0s;
          }
@@ -910,6 +913,9 @@
 //====================================================================================================================
 
 .reviews {
+   position: relative;
+   z-index: 2;
+   background-color: $bgColor;
    padding-top: rem(127);
    padding-bottom: rem(140);
    @media (max-width: $pc) {
@@ -1138,8 +1144,8 @@
    }
    // .phrase__image-ibg
    &__image-ibg {
-      position: absolute;
-      z-index: 1;
+      position: fixed;
+      z-index: -5;
       width: 100vw;
       height: 100vh;
       top: 0;
@@ -1153,6 +1159,9 @@
 //===================================================================================================================
 
 .question {
+   position: relative;
+   z-index: 2;
+   background-color: $bgColor;
    padding-top: rem(127);
    padding-bottom: rem(140);
    @media (max-width: $pc) {

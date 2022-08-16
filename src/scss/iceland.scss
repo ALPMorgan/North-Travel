@@ -330,7 +330,6 @@
       background-color: $bgColor;
       transition: all 1s linear 0s;
       &._active {
-         transform: translate(100%, 0);
          width: 0;
          transition: all 2s linear 0s;
       }
@@ -369,7 +368,7 @@
          transform: translate(-900px, 0);
          &._active {
             transform: translate(0, 0);
-            transition: all 2s ease 0.3s;
+            transition: all 2s linear 0.3s;
          }
       }
    }
@@ -378,7 +377,7 @@
       transform: translate(900px, 0);
       &._active {
          transform: translate(0, 0);
-         transition: all 2s ease 0.3s;
+         transition: all 2s linear 0.3s;
       }
    }
    // .one-attractions__text
@@ -448,7 +447,6 @@
       background-color: $bgColor;
       transition: all 1s linear 0s;
       &._active {
-         transform: translate(-100%, 0);
          width: 0;
          transition: all 2s linear 0s;
       }
@@ -488,7 +486,7 @@
          transform: translate(900px, 0);
          &._active {
             transform: translate(0, 0);
-            transition: all 2s ease 0.3s;
+            transition: all 2s linear 0.3s;
          }
       }
    }
@@ -498,7 +496,7 @@
          transform: translate(-900px, 0);
          &._active {
             transform: translate(0, 0);
-            transition: all 2s ease 0.3s;
+            transition: all 2s linear 0.3s;
          }
       }
    }
@@ -567,7 +565,7 @@
          transform: translate(900px, 0);
          &._active {
             transform: translate(0, 0);
-            transition: all 2s ease 0.3s;
+            transition: all 2s linear 0.3s;
          }
       }
    }
@@ -577,7 +575,7 @@
          transform: translate(-900px, 0);
          &._active {
             transform: translate(0, 0);
-            transition: all 2s ease 0.3s;
+            transition: all 2s linear 0.3s;
          }
       }
    }
@@ -618,7 +616,6 @@
       background-color: $bgColor;
       transition: all 1s linear 0s;
       &._active {
-         transform: translate(100%, 0);
          width: 0;
          transition: all 2s linear 0s;
       }

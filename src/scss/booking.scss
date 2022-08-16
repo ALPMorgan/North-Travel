@@ -1,5 +1,7 @@
 .booking {
    position: relative;
+   z-index: 2;
+   background-color: $bgColor;
    padding-top: rem(127);
    padding-bottom: rem(140);
    @media (max-width: $pc) {

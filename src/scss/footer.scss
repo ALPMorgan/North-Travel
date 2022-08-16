@@ -1,6 +1,9 @@
 //====================================================================================================
 
 .footer {
+	position: relative;
+	z-index: 2;
+	background-color: $bgColor;
 	padding-top: rem(80);
 	padding-bottom: rem(80);
 	padding-left: rem(80);
