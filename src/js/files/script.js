@@ -60,3 +60,79 @@ if (animItems.length > 0) {
       return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
    }
 }
+
+//==============================================================================================
+
+// initImg('#cover__image-ibg img', [
+//    document.getElementById("myImage"),
+//    document.getElementById("myImage"),
+//    document.getElementById("myImage"),
+//    // 'src/img/home/cover/01.png',
+//    // 'src/img/home/cover/02.png',
+//    // 'src/img/home/cover/03.png',
+//    // 'src/img/home/cover/04.png',
+//    // 'src/img/home/cover/05.png'
+// ])
+// function initImg(selector, srcArr) {
+//    const img = document.querySelector(selector);
+//    Object.assign(img, {
+//       buf: Object.assign(new Image(), { img }),
+//       srcArr: [...srcArr],
+//       changeInterval: 5e3,
+//       bufIdx: 0,
+//       change: function () {
+//          this.style.animationName = 'img-in';
+//          this.src = this.buf.src || this.nextImage();
+//          this.buf.src = this.nextImage();
+//       },
+//       nextImage: function () {
+//          this.bufIdx = ++this.bufIdx < this.srcArr.length ? this.bufIdx : 0;
+//          return this.srcArr[this.bufIdx];
+//       }
+//    });
+//    img.buf.addEventListener('load', loadHandler);
+//    img.addEventListener('animationend', animEndHandler);
+//    img.change();
+//    return img;
+
+//    function loadHandler() {
+//       setTimeout(
+//          () => this.img.style.animationName = 'img-out',
+//          this.img.changeInterval
+//       );
+//    }
+//    function animEndHandler({ animationName }) {
+//       if (animationName === 'img-out')
+//          this.change();
+//    }
+// }
+
+
+// var image_count = 5;
+// var interval = 5000; //пауза
+// var time_out = 15; //скорость смены картинки
+// var i = 5;
+// var timeout;
+// var opacity = 100;
+// function change_image() {
+//    opacity--;
+//    var j = i + 1;
+//    var current_image = 'img_' + i;
+//    if (i == image_count) j = 1;
+//    var next_image = 'img_' + j;
+//    document.getElementById(current_image).style.opacity = opacity / 100;
+//    document.getElementById(current_image).style.filter = 'alpha(opacity=' + opacity + ')';
+//    document.getElementById(next_image).style.opacity = (100 - opacity) / 100;
+//    document.getElementById(next_image).style.filter = ' alpha(opacity=' + (100 - opacity) + ')';
+//    timeout = setTimeout("change_image()", time_out);
+//    if (opacity == 1) {
+//       opacity = 100;
+//       clearTimeout(timeout);
+//       i++;
+//       if (i > image_count) i = 1;
+//       timeout = setTimeout("change_image()", interval);
+//    }
+// }
+// change_image()
+
+
