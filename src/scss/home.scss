@@ -116,8 +116,10 @@
          right: 0;
          opacity: 0;
          animation-name: myImgAnimation;
-         animation-duration: 22s;
+         animation-duration: 21s;
          animation-iteration-count: infinite;
+         transform: translateZ(0);
+         will-change: opacity, transform;
          &:nth-child(1) {
             animation-delay: 0s;
          }
@@ -238,6 +240,10 @@
          display: none;
       }
    }
+}
+
+._active-fixed {
+   position: fixed;
 }
 
 .content-about {
@@ -637,7 +643,7 @@
       z-index: 11;
       min-width: 240px;
       min-height: 320px;
-      bottom: -50px;
+      bottom: -30px;
       right: -80px;
       @media (max-width: $pc) {
          bottom: -80px;
@@ -699,7 +705,7 @@
       z-index: 11;
       min-width: 240px;
       min-height: 320px;
-      bottom: -50px;
+      bottom: -30px;
       left: -80px;
       @media (max-width: $pc) {
          bottom: -80px;
