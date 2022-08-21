@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -30,35 +30,36 @@ function initSliders() {
 		new Swiper('.swiper', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			//modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination],
 
-			effect: 'fade',
-			autoplay: {
+			//effect: 'fade', // эффект смены прозрачности
+			autoplay: { //Автопрокрутка
 				delay: 3000,
 				disableOnInteraction: false,
 			},
 
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
+			slidesPerView: 1, //колличество слайдов для показа
+			spaceBetween: 10, //отсутпы между слайдами
 			autoHeight: true,
-			speed: 800,
+			speed: 800, //скорость переключения слайдов
+			//grabCursor: true,
 			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
+			//simulateTouch: false, //отключение перетаскивания на ПК
+			loop: true, //бесконечный слайдер
+			//preloadImages: false, //предзагрузка картинок
 			//lazy: true,
-			// Dotts
-			//pagination: {
-			//	el: '.slider-quality__pagging',
-			//	clickable: true,
-			//},
-			// Arrows
-			// navigation: {
-			// 	nextEl: '.about__more .more__item_next',
-			// 	prevEl: '.about__more .more__item_prev',
-			// },
+			// Точки
+			pagination: {
+				el: '.reviews__dotts',
+				clickable: true,
+			},
+			// Стрелки
+			navigation: {
+				nextEl: '.reviews__arrow-right',
+				prevEl: '.reviews__arrow-left',
+			},
 			/*
 			breakpoints: {
 				320: {
