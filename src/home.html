@@ -7,58 +7,68 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<div class="header__body">
-				<a href="#" data-da=".menu,640,first" class="header__logo">
+			<div class="header__body _anim-items _anim-no-hide">
+				<a href="#page-home" data-da=".menu,640,first" class="header__logo">
 					<img src="@img/home/icons/logo.svg" alt="Logo">
 				</a>
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">О проекте</a></li>
+							<li class="menu__item"><a href="#about" class="menu__link">О проекте</a></li>
 						</ul>
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">Путешествия</a></li>
+							<li class="menu__item"><a href="#traveling" class="menu__link">Путешествия</a></li>
 						</ul>
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">Вопрос-Ответ</a></li>
+							<li class="menu__item"><a href="#question" class="menu__link">Вопрос-Ответ</a></li>
 						</ul>
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+							<li class="menu__item"><a href="#footer-main" class="menu__link">Контакты</a></li>
 						</ul>
 					</nav>
 				</div>
 				<div data-da=".menu,640,last" class="header__social social-header">
-					<a href="#" class="social-header__icon social-header__icon-vk _icon-vk"></a>
-					<a href="#" class="social-header__icon _icon-facebook"></a>
-					<a href="#" class="social-header__icon _icon-instagram"></a>
+					<a href="https://vk.com/" class="social-header__icon social-header__icon-vk _icon-vk"></a>
+					<a href="https://www.facebook.com/" class="social-header__icon _icon-facebook"></a>
+					<a href="https://www.instagram.com/" class="social-header__icon _icon-instagram"></a>
 				</div>
 				<button type="button" class="menu__icon icon-menu">
 					<div></div><span></span>
 				</button>
 			</div>
 		</header>
-		<main class="page">
+		<main id="page-home" class="page page-home">
 			<section class="page__cover cover">
 				<div class="cover__container">
 					<div class="cover__content">
-						<h1 class="cover__title">Отдых в Скандинавии</h1>
-						<div class="cover__subtitle">Авторские путешествия</div>
-						<a href="#" class="cover__button button">Забронировать</a>
+						<h1 class="cover__title _anim-items _anim-no-hide">Отдых в Скандинавии</h1>
+						<div class="cover__subtitle _anim-items _anim-no-hide">Авторские путешествия</div>
+						<a href="#booking" class="cover__button button _anim-items _anim-no-hide">Забронировать</a>
 					</div>
 				</div>
 				<div class="cover__image-ibg">
-					<img src="@img/home/cover/01.png" alt="Cover">
+					<img src="@img/home/cover/01.png" alt="cover">
+					<img src="@img/home/cover/02.png" alt="cover">
+					<img src="@img/home/cover/03.png" alt="cover">
+					<img src="@img/home/cover/04.png" alt="cover">
+					<img src="@img/home/cover/05.png" alt="cover">
+					<img src="@img/home/cover/06.png" alt="cover">
+					<img src="@img/home/cover/01.png" alt="cover">
 				</div>
+				<div class="cover__bg _anim-items _anim-no-hide"></div>
+				<div class="cover__bg-static _anim-items _anim-no-hide"></div>
 			</section>
-			<section class="page__about about">
+			<section id="about" class="page__about about">
 				<div class="about__container">
-					<h2 class="about__title title">О проекте</h2>
+					<h2 class="about__title title _anim-items _anim-no-hide">О проекте</h2>
 					<div class="about__content content-about">
 						<div class="content-about__column content-about__column-one">
 							<div class="content-about__image-ibg">
 								<img src="@img/home/about/01.png" alt="Девушка на горе">
+								<div class="content-about__bg content-about__bg-left _anim-items"></div>
 							</div>
-							<div data-da=".content-about__column-two,480,last" class="content-about__text">
+							<div data-da=".content-about__column-two,480,last"
+								class="content-about__text _anim-items _anim-no-hide">
 								<p>Вы изучите самые укромные уголки Норвегии, побываете у самых величественных водопадов
 									Исландии,
 									поплаваете рядом с самыми огромными айсбергами Гренландии. И в любой из этих стран увидите
@@ -68,7 +78,8 @@
 							</div>
 						</div>
 						<div class="content-about__column content-about__column-two">
-							<div data-da=".content-about__column-one,480,1" class="content-about__text">
+							<div data-da=".content-about__column-one,480,1"
+								class="content-about__text _anim-items _anim-no-hide">
 								<p> Компания North Travel была основана в 2015 двумя целеустремленными людьми, влюбленными в
 									суровый
 									северный край.</p>
@@ -80,80 +91,92 @@
 							</div>
 							<div class="content-about__image-ibg content-about__image-mini ">
 								<img src="@img/home/about/02.png" alt="Северное сияние">
+								<div class="content-about__bg content-about__bg-right _anim-items"></div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="about__image">
+				<div id="about__image" class="about__image _fixed-about">
 					<img src="@img/home/icons/01.svg" alt="Гора">
 				</div>
 			</section>
 			<section class="page__organizers organizers">
 				<div class="organizers__container">
-					<h2 class="organizers__title title">Организаторы путешествия</h2>
+					<h2 class="organizers__title title _anim-items _anim-no-hide">Организаторы путешествия</h2>
 					<div class="organizers__content">
 						<article class="organizers__item item-organizers">
 							<div class="item-organizers__image-ibg">
 								<img src="@img/home/organizers/01.png" alt="Гид">
+								<div class="item-organizers__bg item-organizers__bg-left _anim-items"></div>
 							</div>
 							<div class="item-organizers__body">
-								<div class="item-organizers__title">Александр Волков</div>
-								<div class="item-organizers__profession">Основатель, организатор, гид</div>
-								<div class="item-organizers__text">20 лет опыт путешествий по миру. Знает 3 языка. Встретит в
+								<div class="item-organizers__title _anim-items _anim-no-hide">Александр Волков</div>
+								<div class="item-organizers__profession _anim-items _anim-no-hide">Основатель, организатор, гид
+								</div>
+								<div class="item-organizers__text _anim-items _anim-no-hide">20 лет опыт путешествий по миру.
+									Знает 3 языка. Встретит в
 									аэропорту и будет сопровождать вас каждый день</div>
 							</div>
 						</article>
 						<article class="organizers__item item-organizers">
 							<div class="item-organizers__image-ibg">
 								<img src="@img/home/organizers/02.png" alt="Гид">
+								<div class="item-organizers__bg item-organizers__bg-center _anim-items"></div>
 							</div>
 							<div class="item-organizers__body">
-								<div class="item-organizers__title">Игорь Князев</div>
-								<div class="item-organizers__profession">Основатель, организатор, фотограф</div>
-								<div class="item-organizers__text">15 лет опыт путешествий по миру. Профессиональный фотограф,
+								<div class="item-organizers__title _anim-items _anim-no-hide">Игорь Князев</div>
+								<div class="item-organizers__profession _anim-items _anim-no-hide">Основатель, организатор,
+									фотограф</div>
+								<div class="item-organizers__text _anim-items _anim-no-hide">15 лет опыт путешествий по миру.
+									Профессиональный фотограф,
 									запечатлит лучшие моменты путешествий</div>
 							</div>
 						</article>
 						<article class="organizers__item item-organizers">
 							<div class="item-organizers__image-ibg">
 								<img src="@img/home/organizers/03.png" alt="Гид">
+								<div class="item-organizers__bg item-organizers__bg-right _anim-items"></div>
 							</div>
 							<div class="item-organizers__body">
-								<div class="item-organizers__title">Дмитрий Князев</div>
-								<div class="item-organizers__profession">Переводчик</div>
-								<div class="item-organizers__text">15 лет опыт путешествий по миру. Знает все наречия местных
+								<div class="item-organizers__title _anim-items _anim-no-hide">Дмитрий Князев</div>
+								<div class="item-organizers__profession _anim-items _anim-no-hide">Переводчик</div>
+								<div class="item-organizers__text _anim-items _anim-no-hide">15 лет опыт путешествий по миру.
+									Знает все наречия местных
 									жителей северных стран</div>
 							</div>
 						</article>
 					</div>
 				</div>
 			</section>
-			<section class="page__traveling traveling">
+			<section id="traveling" class="page__traveling traveling">
 				<div class="traveling__container">
-					<div class="traveling__title title">Ближайшие путешествия</div>
+					<div class="traveling__title title _anim-items _anim-no-hide">Ближайшие путешествия</div>
 					<div class="traveling__body">
 						<div class="traveling__media">
 							<div class="traveling__image-ibg">
 								<img src="@img/home/traveling/01.png" alt="Природа">
+								<div class="traveling__bg traveling__bg-left _anim-items"></div>
 							</div>
-							<div class="traveling__image-mini-ibg">
+							<div class="traveling__image-mini-ibg rellax">
 								<img src="@img/home/traveling/02.png" alt="Природа">
 							</div>
 						</div>
 						<div class="traveling__content content-traveling">
-							<div class="content-traveling__date">01-10 октября 2022 г.</div>
-							<h3 class="content-traveling__country">Исландия</h3>
-							<div class="content-traveling__text">Путешествие в 8 дней. Вы увидите самые большие города
+							<div class="content-traveling__date _anim-items _anim-no-hide">01-10 октября 2022 г.</div>
+							<h3 class="content-traveling__country _anim-items _anim-no-hide">Исландия</h3>
+							<div class="content-traveling__text _anim-items _anim-no-hide">Путешествие в 8 дней. Вы увидите
+								самые большие города
 								Исландии, красивые водопады, долину гейзеров. Отведаете деликатесы и окунетесь в местную
 								культуру.</div>
-							<div class="content-traveling__price">200000 р</div>
-							<a href="#" class="content-traveling__button button">Подробнее</a>
+							<div class="content-traveling__price _anim-items _anim-no-hide">200000 р</div>
+							<a href="iceland.html"
+								class="content-traveling__button button _anim-items _anim-no-hide">Подробнее</a>
 						</div>
 						<div class="content-traveling__columns">
 							<div class="content-traveling__column-one">
 								<h3 class="content-traveling__country">Исландия</h3>
 								<div class="content-traveling__date">01-10 октября 2022 г.</div>
-								<a href="#" class="content-traveling__button button">Подробнее</a>
+								<a href="iceland.html" class="content-traveling__button button">Подробнее</a>
 							</div>
 							<div class="content-traveling__column-two">
 								<div class="content-traveling__text">Путешествие в 8 дней. Вы увидите самые большие города
@@ -167,19 +190,21 @@
 						<div class="traveling__media-reverse">
 							<div class="traveling__image-reverse-ibg">
 								<img src="@img/home/traveling/03.png" alt="Природа">
+								<div class="traveling__bg traveling__bg-right _anim-items"></div>
 							</div>
-							<div class="traveling__image-mini-reverse-ibg">
+							<div class="traveling__image-mini-reverse-ibg rellax">
 								<img src="@img/home/traveling/04.png" alt="Природа">
 							</div>
 						</div>
 						<div class="traveling__content content-traveling content-traveling-revers">
-							<div class="content-traveling__date">01-10 ноября 2022 г.</div>
-							<h3 class="content-traveling__country">Норвегия</h3>
-							<div class="content-traveling__text">Путешествие в 8 дней. Вы увидите самые большие города
+							<div class="content-traveling__date _anim-items _anim-no-hide">01-10 ноября 2022 г.</div>
+							<h3 class="content-traveling__country _anim-items _anim-no-hide">Норвегия</h3>
+							<div class="content-traveling__text _anim-items _anim-no-hide">Путешествие в 8 дней. Вы увидите
+								самые большие города
 								Норвегии, красивые водопады, величественные фьорды. Отведаете морские деликатесы и окунетесь в
 								местную культуру.</div>
-							<div class="content-traveling__price">200000 р</div>
-							<a href="#" class="content-traveling__button button">Подробнее</a>
+							<div class="content-traveling__price _anim-items _anim-no-hide">200000 р</div>
+							<a href="#" class="content-traveling__button button _anim-items _anim-no-hide">Подробнее</a>
 						</div>
 						<div class="content-traveling__columns">
 							<div class="content-traveling__column-one">
@@ -199,18 +224,20 @@
 						<div class="traveling__media">
 							<div class="traveling__image-ibg">
 								<img src="@img/home/traveling/05.png" alt="Природа">
+								<div class="traveling__bg traveling__bg-left _anim-items"></div>
 							</div>
-							<div class="traveling__image-mini-ibg">
+							<div class="traveling__image-mini-ibg rellax">
 								<img src="@img/home/traveling/06.png" alt="Природа">
 							</div>
 						</div>
 						<div class="traveling__content content-traveling">
-							<div class="content-traveling__date">01-10 декабря 2022 г.</div>
-							<h3 class="content-traveling__country">Гренландия</h3>
-							<div class="content-traveling__text">Путешествие в 7 дней. Вы увидите самые большие города
+							<div class="content-traveling__date _anim-items _anim-no-hide">01-10 декабря 2022 г.</div>
+							<h3 class="content-traveling__country _anim-items _anim-no-hide">Гренландия</h3>
+							<div class="content-traveling__text _anim-items _anim-no-hide">Путешествие в 7 дней. Вы увидите
+								самые большие города
 								Гренландии, окунетесь в горячих термальных источниках и увидите айсберги.</div>
-							<div class="content-traveling__price">150000 р</div>
-							<a href="#" class="content-traveling__button button">Подробнее</a>
+							<div class="content-traveling__price _anim-items _anim-no-hide">150000 р</div>
+							<a href="#" class="content-traveling__button button _anim-items _anim-no-hide">Подробнее</a>
 						</div>
 						<div class="content-traveling__columns">
 							<div class="content-traveling__column-one">
@@ -229,19 +256,21 @@
 						<div class="traveling__media-reverse">
 							<div class="traveling__image-reverse-ibg">
 								<img src="@img/home/traveling/03.png" alt="Природа">
+								<div class="traveling__bg traveling__bg-right _anim-items"></div>
 							</div>
-							<div class="traveling__image-mini-reverse-ibg">
+							<div class="traveling__image-mini-reverse-ibg rellax">
 								<img src="@img/home/traveling/04.png" alt="Природа">
 							</div>
 						</div>
 						<div class="traveling__content content-traveling content-traveling-revers">
-							<div class="content-traveling__date">01-10 ноября 2022 г.</div>
-							<h3 class="content-traveling__country">Норвегия</h3>
-							<div class="content-traveling__text">Путешествие в 8 дней. Вы увидите самые большие города
+							<div class="content-traveling__date _anim-items _anim-no-hide">01-10 ноября 2022 г.</div>
+							<h3 class="content-traveling__country _anim-items _anim-no-hide">Норвегия</h3>
+							<div class="content-traveling__text _anim-items _anim-no-hide">Путешествие в 8 дней. Вы увидите
+								самые большие города
 								Норвегии, красивые водопады, величественные фьорды. Отведаете морские деликатесы и окунетесь в
 								местную культуру.</div>
-							<div class="content-traveling__price">200000 р</div>
-							<a href="#" class="content-traveling__button button">Подробнее</a>
+							<div class="content-traveling__price _anim-items _anim-no-hide">200000 р</div>
+							<a href="#" class="content-traveling__button button _anim-items _anim-no-hide">Подробнее</a>
 						</div>
 						<div class="content-traveling__columns">
 							<div class="content-traveling__column-one">
@@ -258,129 +287,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="traveling__image">
+				<div class="traveling__image _fixed-traveling">
 					<img src="@img/home/icons/02.svg" alt="Гора">
 				</div>
 			</section>
-			<!-- <section class="page__traveling traveling">
-				<div class="traveling__container">
-					<div class="traveling__title title">Ближайшие путешествия</div>
-					<div class="traveling__body">
-						<div class="traveling__media">
-							<div class="traveling__image-ibg">
-								<img src="@img/home/traveling/01.png" alt="Природа">
-							</div>
-							<div class="traveling__image-mini-ibg">
-								<img src="@img/home/traveling/02.png" alt="Природа">
-							</div>
-						</div>
-						<div class="traveling__content content-traveling">
-							<div data-da=".column-one-iceland,960" class="content-traveling__date">01-10 октября
-								2022 г.</div>
-							<h3 data-da=".column-one-iceland,960,first" class="content-traveling__country">Исландия
-							</h3>
-							<div data-da=".column-two-iceland,960,0" data-da=".column-one-iceland,480,2"
-								class="content-traveling__text">Путешествие в 8
-								дней. Вы увидите самые большие города
-								Исландии,
-								красивые водопады, долину гейзеров. Отведаете деликатесы и окунетесь в местную культуру.</div>
-							<div data-da=".column-two-iceland,960,1" data-da=".column-one-iceland,480,last"
-								class="content-traveling__price">200000 р</div>
-							<a href="#" data-da=".column-one-iceland,960,last"
-								class="content-traveling__button button">Подробнее</a>
-							<div class="content-traveling__columns">
-								<div class="content-traveling__column-one column-one-iceland"></div>
-								<div class="content-traveling__column-two column-two-iceland"></div>
-							</div>
-						</div>
-					</div>
-					<div class="traveling__body traveling__body-reverse">
-						<div class="traveling__media-reverse">
-							<div class="traveling__image-reverse-ibg">
-								<img src="@img/home/traveling/03.png" alt="Природа">
-							</div>
-							<div class="traveling__image-mini-reverse-ibg">
-								<img src="@img/home/traveling/04.png" alt="Природа">
-							</div>
-						</div>
-						<div class="traveling__content content-traveling-revers">
-							<div data-da=".column-one-norway,960" class="content-traveling__date">01-10 ноября 2022 г.</div>
-							<h3 data-da=".column-one-norway,960,first" class="content-traveling__country">Норвегия</h3>
-							<div data-da=".column-two-norway,960,0" class="content-traveling__text">Путешествие в 8 дней. Вы
-								увидите самые большие города
-								Норвегии, красивые водопады, величественные фьорды. Отведаете морские деликатесы и окунетесь в
-								местную культуру.</div>
-							<div data-da=".column-two-norway,960,1" class="content-traveling__price">200000 р</div>
-							<a href="#" data-da=".column-one-norway,960,last"
-								class="content-traveling__button button">Подробнее</a>
-							<div class="content-traveling__columns">
-								<div class="content-traveling__column-one column-one-norway"></div>
-								<div class="content-traveling__column-two column-two-norway"></div>
-							</div>
-						</div>
-					</div>
-					<div class="traveling__body">
-						<div class="traveling__media">
-							<div class="traveling__image-ibg">
-								<img src="@img/home/traveling/05.png" alt="Природа">
-							</div>
-							<div class="traveling__image-mini-ibg">
-								<img src="@img/home/traveling/06.png" alt="Природа">
-							</div>
-						</div>
-						<div class="traveling__content content-traveling">
-							<div data-da=".column-one-greenland,960" class="content-traveling__date">01-10
-								декабря
-								2022 г.</div>
-							<h3 data-da=".column-one-greenland,960,first" class="content-traveling__country">
-								Гренландия</h3>
-							<div data-da=".column-two-greenland,960,0" class="content-traveling__text">
-								Путешествие в 7
-								дней. Вы увидите самые большие города
-								Гренландии, окунетесь в горячих термальных источниках и увидите айсберги.</div>
-							<div data-da=".column-two-greenland,960,1" class="content-traveling__price">
-								150000 р</div>
-							<a href="#" data-da=".column-one-greenland,960,last"
-								class="content-traveling__button button">Подробнее</a>
-							<div class="content-traveling__columns">
-								<div class="content-traveling__column-one column-one-greenland"></div>
-								<div class="content-traveling__column-two column-two-greenland"></div>
-							</div>
-						</div>
-					</div>
-					<div class="traveling__body traveling__body-reverse">
-						<div class="traveling__media-reverse">
-							<div class="traveling__image-reverse-ibg">
-								<img src="@img/home/traveling/03.png" alt="Природа">
-							</div>
-							<div class="traveling__image-mini-reverse-ibg">
-								<img src="@img/home/traveling/04.png" alt="Природа">
-							</div>
-						</div>
-						<div class="traveling__content content-traveling-revers">
-							<div data-da=".column-one-bolgar,960" class="content-traveling__date">01-10 ноября 2022 г.</div>
-							<h3 data-da=".column-one-bolgar,960,first" class="content-traveling__country">Норвегия</h3>
-							<div data-da=".column-two-bolgar,960,0" class="content-traveling__text">Путешествие в 8 дней. Вы
-								увидите самые большие города
-								Норвегии, красивые водопады, величественные фьорды. Отведаете морские деликатесы и окунетесь в
-								местную культуру.</div>
-							<div data-da=".column-two-bolgar,960,1" class="content-traveling__price">200000 р</div>
-							<a href="#" data-da=".column-one-bolgar,960,last"
-								class="content-traveling__button button">Подробнее</a>
-							<div class="content-traveling__columns">
-								<div class="content-traveling__column-one column-one-bolgar"></div>
-								<div class="content-traveling__column-two column-two-bolgar"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="traveling__image">
-					<img src="@img/home/icons/02.svg" alt="Гора">
-				</div>
-			</section> -->
 			<section class="page__reviews reviews">
 				<div class="reviews__container">
-					<div class="reviews__title title">Отзывы о путешествиях с нами</div>
+					<div class="reviews__title title _anim-items _anim-no-hide">Отзывы о путешествиях с нами</div>
 					<div class="reviews__content">
 						<div class="reviews__slider swiper">
 							<div class="reviews__wrapper swiper-wrapper">
@@ -548,13 +461,15 @@
 						<button type="button" class="reviews__arrow reviews__arrow-left _icon-arrow"></button>
 						<button type="button" class="reviews__arrow reviews__arrow-right _icon-arrow"></button>
 					</div>
+				</div>
 			</section>
 			<div class="page__phrase phrase">
 				<div class="phrase__container">
 					<div class="phrase__content">
-						<div class="phrase__text">Двигаться, дышать, парить, плыть, получать то, что даришь, исследовать,
+						<div class="phrase__text _anim-items _anim-no-hide">Двигаться, дышать, парить, плыть, получать то, что
+							даришь, исследовать,
 							путешествовать – это и значит ЖИТЬ</div>
-						<div class="phrase__autor">— Ганс Кристиан Андерсен</div>
+						<div class="phrase__autor _anim-items _anim-no-hide">— Ганс Кристиан Андерсен</div>
 					</div>
 				</div>
 				<div class="phrase__filter"></div>
@@ -562,13 +477,14 @@
 					<img src="@img/home/phrase/01.png" alt="Cover">
 				</div>
 			</div>
-			<section class="page__question question">
+			<section id="question" class="page__question question">
 				<div class="question__container">
 					<div class="question__body">
-						<h2 class="question__title title">Вопрос-Ответ</h2>
+						<h2 class="question__title title _anim-items _anim-no-hide">Вопрос-Ответ</h2>
 						<div data-spollers class="question__spollers spollers-question">
 							<div class="spollers-question__item">
-								<button type="button" data-spoller class="spollers-question__title">Как отменить тур во время
+								<button type="button" data-spoller
+									class="spollers-question__title _anim-items _anim-no-hide">Как отменить тур во время
 									пандемии?<span class="_icon-plus"></span></button>
 								<div class="spollers-question__body">
 									Во время начала пандемии возможно:<br>
@@ -578,7 +494,8 @@
 								</div>
 							</div>
 							<div class="spollers-question__item">
-								<button type="button" data-spoller class="spollers-question__title">Как оплатить?<span
+								<button type="button" data-spoller
+									class="spollers-question__title _anim-items _anim-no-hide">Как оплатить?<span
 										class="_icon-plus"></span></button>
 								<div class="spollers-question__body">
 									Наличными в офисе North Treval в городе Ижевск. Либо пластиковой картой Visa, Visa Electron,
@@ -586,7 +503,8 @@
 								</div>
 							</div>
 							<div class="spollers-question__item">
-								<button type="button" data-spoller class="spollers-question__title">Нужна виза?<span
+								<button type="button" data-spoller
+									class="spollers-question__title _anim-items _anim-no-hide">Нужна виза?<span
 										class="_icon-plus"></span></button>
 								<div class="spollers-question__body">
 									Страны из списка входят в Шенгенскую зону. При въезде в эти страны необходимо иметь
@@ -595,21 +513,24 @@
 								</div>
 							</div>
 							<div class="spollers-question__item">
-								<button type="button" data-spoller class="spollers-question__title">Откуда вылетаем?<span
+								<button type="button" data-spoller
+									class="spollers-question__title _anim-items _anim-no-hide">Откуда вылетаем?<span
 										class="_icon-plus"></span></button>
 								<div class="spollers-question__body">
 									Вылетаем из Москвы. До Москвы вы доезжачие любым удобным способом за ваш счет.
 								</div>
 							</div>
 							<div class="spollers-question__item">
-								<button type="button" data-spoller class="spollers-question__title">За сколько дней до поездки
+								<button type="button" data-spoller class="spollers-question__title _anim-items _anim-no-hide">За
+									сколько дней до поездки
 									бронировать тур?<span class="_icon-plus"></span></button>
 								<div class="spollers-question__body">
 									Нужно бронировать за 30−40 дней до начала тура. Количество мест ограниченно
 								</div>
 							</div>
 							<div class="spollers-question__item">
-								<button type="button" data-spoller class="spollers-question__title">Медицина и здоровье<span
+								<button type="button" data-spoller
+									class="spollers-question__title _anim-items _anim-no-hide">Медицина и здоровье<span
 										class="_icon-plus"></span></button>
 								<div class="spollers-question__body">
 									Обязательно при выезде за границу иметь с собой медицинскую страховку, в которой прописаны
@@ -625,35 +546,37 @@
 			</section>
 			@@include('html/_booking.htm',{})
 		</main>
-		<footer class="footer">
+		<footer id="footer-main" class="footer footer-main">
 			<div class="footer__body">
-				<div class="footer__logo">
+				<a href="#page-home" class="footer__logo _anim-items _anim-no-hide">
 					<img src="@img/home/icons/logo.svg" alt="Лого">
-				</div>
+				</a>
 				<div class="footer__main main-footer">
-					<div class="main-footer__address">
+					<div class="main-footer__address _anim-items _anim-no-hide">
 						© 2020 - North Travel - <br>
 						ИП: Волков Александр Константинович<br>
 						ИНН: 123546872135421, ИГРНПН: 132156513216565<br>
 						1235465, г. Ижевск, ул. Советская, д. 252<br>
 					</div>
-					<div class="main-footer__menu menu-footer">
+					<div class="main-footer__menu menu-footer _anim-items _anim-no-hide">
 						<nav class="menu-footer__body">
 							<ul class="menu-footer__list">
-								<li class="menu-footer__item"><a href="" class="menu-footer__link">Главная</a></li>
+								<li class="menu-footer__item"><a href="#page-home" class="menu-footer__link">Главная</a></li>
 							</ul>
 							<ul class="menu-footer__list">
-								<li class="menu-footer__item"><a href="" class="menu-footer__link">О проекте</a></li>
+								<li class="menu-footer__item"><a href="#about" class="menu-footer__link">О проекте</a></li>
 							</ul>
 							<ul class="menu-footer__list">
-								<li class="menu-footer__item"><a href="" class="menu-footer__link">Путешествия</a></li>
+								<li class="menu-footer__item"><a href="#traveling" class="menu-footer__link">Путешествия</a>
+								</li>
 							</ul>
 							<ul class="menu-footer__list">
-								<li class="menu-footer__item"><a href="" class="menu-footer__link">Вопрос-Ответ</a></li>
+								<li class="menu-footer__item"><a href="#question" class="menu-footer__link">Вопрос-Ответ</a>
+								</li>
 							</ul>
 						</nav>
 					</div>
-					<div class="main-footer__contacts contacts-footer">
+					<div class="main-footer__contacts contacts-footer _anim-items _anim-no-hide">
 						<div class="contacts-footer__title">Контакты</div>
 						<div class="contacts-footer__connection">
 							<a href="tel:89128586303">Тел: <span>+7 912-858-63-03</span></a>
@@ -661,20 +584,23 @@
 						</div>
 					</div>
 				</div>
-				<div class="footer__bottom bottom-footer">
+				<div class="footer__bottom bottom-footer _anim-items _anim-no-hide">
 					<div class="bottom-footer__policy">
 						<a href="#">Политика конфиденциальности</a><br>
 						Информация на сайте не является публичной афертой
 					</div>
 					<div data-da=".main-footer,480,2" class="bottom-footer__social social-footer">
-						<a href="#" class="social-footer__icon social-footer__icon-vk _icon-vk"></a>
-						<a href="#" class="social-footer__icon _icon-facebook"></a>
-						<a href="#" class="social-footer__icon _icon-instagram"></a>
+						<a href="https://vk.com/" target="_blank"
+							class="social-footer__icon social-footer__icon-vk _icon-vk"></a>
+						<a href="https://www.facebook.com/" target="_blank" class="social-footer__icon _icon-facebook"></a>
+						<a href="https://www.instagram.com/" target="_blank" class="social-footer__icon _icon-instagram"></a>
 					</div>
 				</div>
 			</div>
 		</footer>
 	</div>
-	@@include('html/_popup.htm',{})
+	<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 	@@include('html/_js.htm',{})
 </body>
+
+</html>

@@ -1,5 +1,7 @@
 .booking {
    position: relative;
+   z-index: 2;
+   background-color: $bgColor;
    padding-top: rem(127);
    padding-bottom: rem(140);
    @media (max-width: $pc) {
@@ -71,11 +73,23 @@
       background-color: #454545;
       padding: 0px 20px;
       color: $mainColor;
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
    }
    // .checkbox-form__input-area
    &__input-area {
       min-height: rem(85);
       padding-top: rem(15);
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
    }
    // .form-booking__checkbox
    &__checkbox {
@@ -96,11 +110,26 @@
             border: 1px solid $mainColor;
          }
       }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            transform: translate(0, 0);
+            opacity: 1;
+            transition: opacity 1.3s ease 0.3s, transform 1.3s ease 0.3s, color 0.3s ease 0s,
+               background-color 0.3s ease 0s, border 0.3s ease 0s;
+         }
+      }
    }
 }
 
 .checkbox-form {
    position: relative;
+   @media (min-width: $tablet) {
+      @include animScrollStart;
+      &._active {
+         @include animScrollOne;
+      }
+   }
    // .checkbox__input
    &__input {
       position: absolute;

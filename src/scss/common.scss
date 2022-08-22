@@ -6,6 +6,12 @@
    font-weight: 600;
    line-height: math.div(74.4, 48);
    text-align: center;
+   @media (min-width: $tablet) {
+      @include animScrollStart;
+      &._active {
+         @include animScrollOne;
+      }
+   }
    @media (max-width: $tablet) {
       line-height: math.div(55.2, 48);
    }

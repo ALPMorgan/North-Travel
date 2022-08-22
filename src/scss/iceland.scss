@@ -55,6 +55,12 @@
       @media (max-width: $mobile) {
          display: none;
       }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollThree;
+         }
+      }
    }
    // .cover-travel__title
    &__title {
@@ -78,6 +84,12 @@
       @media (max-width: $mobileSmall) {
          margin-bottom: rem(27);
       }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollFour;
+         }
+      }
    }
    // .cover-travel__button
    &__button {
@@ -96,6 +108,15 @@
          min-height: rem(50);
          max-width: rem(200);
          font-size: rem(14);
+      }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            transform: translate(0, 0);
+            opacity: 1;
+            transition: opacity 1.3s ease 1.5s, transform 1.3s ease 1.5s, color 0.3s ease 0s,
+               background-color 0.3s ease 0s, border 0.3s ease 0s;
+         }
       }
    }
    // .cover-travel__media
@@ -145,6 +166,12 @@
          min-width: rem(290);
          padding-bottom: 84.7%;
       }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollSix;
+         }
+      }
    }
    // .cover-travel__image-mini
    &__image-mini {
@@ -174,6 +201,12 @@
          width: 100%;
          padding-bottom: 62.5%;
       }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
    }
    // .cover-travel__image-litle
    &__image-litle {
@@ -201,6 +234,12 @@
       }
       @media (max-width: $mobileSmall) {
          display: none;
+      }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollTwo;
+         }
       }
    }
    // .cover-travel__image-icon
@@ -311,18 +350,50 @@
       @media (max-width: $pc) {
          display: none;
       }
+      @media (min-width: $pc) {
+         transform: translate(-900px, 0);
+         &._active {
+            transform: translate(0, 0);
+            transition: all 2s linear 0.3s;
+         }
+      }
    }
    // .one-attractions__title
    &__title {
+      transform: translate(900px, 0);
+      &._active {
+         transform: translate(0, 0);
+         transition: all 2s linear 0.3s;
+      }
    }
    // .one-attractions__text
    &__text {
       max-width: 600px;
+      @include animScrollStart;
+      &._active {
+         @include animScrollOne;
+      }
       @media (max-width: $pc) {
          max-width: 420px;
       }
       @media (max-width: $tablet) {
          max-width: 100%;
+      }
+   }
+   @media (min-width: $tablet) {
+      // .one-attractions__bg
+      &__bg {
+         position: absolute;
+         top: 0;
+         right: 0;
+         width: 100%;
+         height: 100%;
+         background-color: $bgColor;
+         transition: all 1s linear 0s;
+         &._active {
+            width: 0;
+            transition: all 2s linear 0s;
+         }
       }
    }
 }
@@ -399,12 +470,46 @@
       @media (max-width: $pc) {
          display: none;
       }
+      @media (min-width: $pc) {
+         transform: translate(900px, 0);
+         &._active {
+            transform: translate(0, 0);
+            transition: all 2s linear 0.3s;
+         }
+      }
    }
    // .two-attractions__title
    &__title {
+      @media (min-width: $tablet) {
+         transform: translate(-900px, 0);
+         &._active {
+            transform: translate(0, 0);
+            transition: all 2s linear 0.3s;
+         }
+      }
    }
    // .two-attractions__text
    &__text {
+      @include animScrollStart;
+      &._active {
+         @include animScrollOne;
+      }
+   }
+   @media (min-width: $tablet) {
+      // .two-attractions__bg
+      &__bg {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: $bgColor;
+         transition: all 1s linear 0s;
+         &._active {
+            width: 0;
+            transition: all 2s linear 0s;
+         }
+      }
    }
 }
 
@@ -460,12 +565,30 @@
       @media (max-width: $pc) {
          display: none;
       }
+      @media (min-width: $pc) {
+         transform: translate(900px, 0);
+         &._active {
+            transform: translate(0, 0);
+            transition: all 2s linear 0.3s;
+         }
+      }
    }
    // .three-attractions__title
    &__title {
+      @media (min-width: $tablet) {
+         transform: translate(-900px, 0);
+         &._active {
+            transform: translate(0, 0);
+            transition: all 2s linear 0.3s;
+         }
+      }
    }
    // .three-attractions__text
    &__text {
+      @include animScrollStart;
+      &._active {
+         @include animScrollOne;
+      }
    }
    // .three-attractions__media
    &__media {
@@ -492,6 +615,22 @@
       padding-bottom: 118.2%;
       @media (max-width: $tablet) {
          padding-bottom: 113.7%;
+      }
+   }
+   @media (min-width: $tablet) {
+      // .three-attractions__bg
+      &__bg {
+         position: absolute;
+         top: 0;
+         right: 0;
+         width: 100%;
+         height: 100%;
+         background-color: $bgColor;
+         transition: all 1s linear 0s;
+         &._active {
+            width: 0;
+            transition: all 2s linear 0s;
+         }
       }
    }
 }
@@ -540,6 +679,12 @@
       &:not(:last-child) {
          margin-bottom: 30px;
       }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
    }
    // .phrase-swiper__autor
    &__autor {
@@ -547,6 +692,12 @@
       font-size: rem(18);
       line-height: math.div(27, 18);
       font-weight: 600;
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollTwo;
+         }
+      }
    }
    // .phrase-swiper__image-ibg
    &__image-ibg {
@@ -559,6 +710,62 @@
       @media (max-width: $mobile) {
          height: 80vh;
       }
+      & img {
+         position: absolute;
+         width: 100%;
+         left: 0;
+         right: 0;
+         opacity: 0;
+         animation-name: myImgAnimationCountry;
+         animation-duration: 25s;
+         animation-iteration-count: infinite;
+         &:nth-child(1) {
+            animation-delay: 0s;
+         }
+         &:nth-child(2) {
+            animation-delay: 3s;
+         }
+         &:nth-child(3) {
+            animation-delay: 6s;
+         }
+         &:nth-child(4) {
+            animation-delay: 9s;
+         }
+         &:nth-child(5) {
+            animation-delay: 12s;
+         }
+         &:nth-child(6) {
+            animation-delay: 15s;
+         }
+         &:nth-child(7) {
+            animation-delay: 18s;
+         }
+         &:nth-child(8) {
+            animation-delay: 21s;
+         }
+      }
+   }
+}
+
+@keyframes myImgAnimationCountry {
+   0% {
+      opacity: 0;
+   }
+
+   12.12% {
+      opacity: 1;
+   }
+
+   35.35% {
+      opacity: 1;
+   }
+
+   65.45% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 0;
    }
 }
 
@@ -589,11 +796,19 @@
          margin-bottom: rem(35);
       }
    }
+   // // .program__block // для горизонтального скролла
+   // &__block {
+   //    position: relative;
+   //    width: 100%;
+   //    display: flex;
+   // }
    // .program__body
    &__body {
       display: flex;
+      //min-width: 100%; для горизонтального скролла
       min-height: 520px;
       &:not(:last-child) {
+         // margin-right: 500px; для горизонтального скролла
          margin-bottom: 300px;
          min-height: 410px;
       }
@@ -655,9 +870,10 @@
    // .program__image-mini-ibg
    &__image-mini-ibg {
       position: absolute;
+      z-index: 11;
       min-width: 240px;
       min-height: 320px;
-      bottom: -110px;
+      bottom: -30px;
       right: -30px;
       @media (max-width: $pc) {
          bottom: -120px;
@@ -724,9 +940,10 @@
    // .program__image-mini-reverse-ibg
    &__image-mini-reverse-ibg {
       position: absolute;
+      z-index: 11;
       min-width: 240px;
       min-height: 320px;
-      bottom: -110px;
+      bottom: -30px;
       left: -30px;
       @media (max-width: $pc) {
          bottom: -120px;
@@ -752,6 +969,33 @@
       }
       @media (max-width: $tablet) {
          display: none;
+      }
+   }
+   @media (min-width: $tablet) {
+      // .program__bg
+      &__bg {
+         position: absolute;
+         z-index: 10;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-color: $bgColor;
+      }
+      // .program__bg-left
+      &__bg-left {
+         left: 0;
+         &._active {
+            width: 0;
+            transition: all 2s linear 0s;
+         }
+      }
+      // .program__bg-right
+      &__bg-right {
+         right: 0;
+         &._active {
+            width: 0;
+            transition: all 2s linear 0s;
+         }
       }
    }
 }
@@ -788,6 +1032,12 @@
          max-width: none;
          width: 100%;
       }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
    }
    // .content-program__text
    &__text {
@@ -803,6 +1053,12 @@
          line-height: math.div(22.4, 16);
          & > *:not(:last-child) {
             margin-bottom: 18px;
+         }
+      }
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
          }
       }
    }
@@ -860,15 +1116,15 @@
 .spollers-price {
    border-top: 1px solid $mainColor;
    border-bottom: 1px solid $mainColor;
-   padding: rem(20) 0px;
+   padding: rem(25) 0px;
    // .spollers-price__item
    &__item {
       &:not(:last-child) {
          border-bottom: 1px solid $mainColor;
-         padding-bottom: rem(20);
+         padding-bottom: rem(25);
       }
       &:not(:first-child) {
-         padding-top: rem(20);
+         padding-top: rem(25);
       }
    }
    // .spollers-price__title
@@ -884,6 +1140,12 @@
       gap: rem(10);
       text-align: start;
       transition: all 0.3s ease 0s;
+      @media (min-width: $tablet) {
+         @include animScrollStart;
+         &._active {
+            @include animScrollOne;
+         }
+      }
       @media (max-width: $mobile) {
          font-size: rem(20);
       }
