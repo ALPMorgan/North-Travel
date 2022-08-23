@@ -9,6 +9,16 @@ var rellax = new Rellax('.rellax', {
 	horizontal: false
 });
 
+var rellax = new Rellax('.rellax-gora', {
+	speed: -5,
+	center: true,
+	wrapper: null,
+	round: true,
+	vertical: true,
+	horizontal: false
+});
+
+
 //=================================================================================
 
 

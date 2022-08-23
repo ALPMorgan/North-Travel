@@ -2,7 +2,7 @@
 
 .footer {
 	position: relative;
-	z-index: 2;
+	z-index: 5;
 	background-color: $bgColor;
 	padding-top: rem(80);
 	padding-bottom: rem(80);
@@ -24,6 +24,8 @@
 	}
 	// .footer__body
 	&__body {
+		position: relative;
+		z-index: 2;
 	}
 	// .footer__logo
 	&__logo {
@@ -45,6 +47,18 @@
 	}
 	// .footer__bottom
 	&__bottom {
+	}
+	// .footer__bg
+	&__bg {
+		@media (max-width: $mobileSmall) {
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: -50%;
+			background-color: $bgColor;
+			width: 200vw;
+			height: 100%;
+		}
 	}
 }
 

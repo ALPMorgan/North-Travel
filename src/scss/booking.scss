@@ -142,6 +142,9 @@
       &:checked + .checkbox__label:before {
          background: #000;
       }
+      &:checked + .checkbox__label::after {
+         background: #fff;
+      }
    }
    // .checkbox__label
    &__label {
